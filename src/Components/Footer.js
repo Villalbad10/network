@@ -2,7 +2,7 @@ import React from 'react'
 import {FooterBack, FooterSection, ImagePlus } from '../styles/styles'
 import {AiFillHome, AiOutlineSearch} from 'react-icons/ai'
 import {IoMdNotifications} from 'react-icons/io'
-import Link from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 const FooterDiv= () => {
   return (
