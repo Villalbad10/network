@@ -1,7 +1,12 @@
 *{
+<<<<<<< HEAD
     margin: 0;
+=======
+    margin: 0 ;
+>>>>>>> 698875dc155bccfc7d21af2b79ebb956411ef84c
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Balsamiq Sans', cursive;
 }
 
 body{
