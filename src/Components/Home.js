@@ -1,5 +1,4 @@
 import React from 'react'
-import LoginComp from './LoginComp'
 
 const Home = () => {
   return (
