@@ -5,6 +5,7 @@ import { Card, HeadDiv, ImageAvatar, ImageAvatar2, NameDiv, SliderDiv, UlList } 
 import { BsFillBookmarkFill, BsChat } from 'react-icons/bs'
 import FooterDiv from './Footer'
 import getData from '../helpers/getData'
+import { Link } from 'react-router-dom'
 
 
 const Home = () => {
@@ -44,7 +45,7 @@ const Home = () => {
                     data.map(user => (
                         <Card key={user.id}>
                             <NameDiv>
-                                <ImageAvatar2 style={{ 'width': '8%' }} src={user.avatar} alt="profile" />
+                                <Link to="/perfil"> <ImageAvatar2 style={{ 'width': '80%' }} src={user.avatar} alt="profile" /></Link>
                                 <p style={{ 'fontSize': '14px', 'fontWeight': '600' }} >{user.name}</p>
                             </NameDiv>
                             <img style={{ 'width': '95%', 'display': 'flex', 'margin': '0 auto' }} src={user.image} alt='picturePub' />
