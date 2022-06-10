@@ -48,6 +48,10 @@ const LoginComp = () => {
             <Btn variant="outline-primary" type="submit">
                Submit
             </Btn>
+            <Link to="/register"><Btn variant="outline-primary">
+               Register
+            </Btn>
+            </Link>
          </FormDiv>
       </LoginDiv>
    )
