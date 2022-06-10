@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { FiHeart } from 'react-icons/fi'
 import { IoChatbubblesOutline, IoPaperPlaneOutline } from 'react-icons/io5'
-import { Card, HeadDiv, NameDiv, SliderDiv, UlList } from '../styles/styles'
+import { Card, HeadDiv, ImageAvatar, NameDiv, SliderDiv, UlList } from '../styles/styles'
 import { BsFillBookmarkFill, BsChat } from 'react-icons/bs'
 import FooterDiv from './Footer'
 import getData from '../helpers/getData'
@@ -30,7 +30,7 @@ const Home = () => {
                 <UlList>
                     {
                         data.map(avatar => (
-                            <li key={avatar.id} style={{ 'listStyleType': 'none' }}><img src={avatar.avatar} alt="img" /></li>
+                            <li key={avatar.id} style={{ 'listStyleType': 'none' }}><ImageAvatar src={avatar.avatar} alt="img" /></li>
                         ))
                     }
 
