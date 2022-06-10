@@ -28,15 +28,12 @@ const Home = () => {
 
             <SliderDiv>
                 <UlList>
-                    <li style={{ 'listStyleType': 'none' }}><img src="https://res.cloudinary.com/dg29vcpk7/image/upload/v1654808281/FindyApp/Ellipse-1_yjx2dc.png" alt="img" /></li>
-                    <li style={{ 'listStyleType': 'none' }}><img src="https://res.cloudinary.com/dg29vcpk7/image/upload/v1654805779/FindyApp/Group_2_prbahn.png" alt="img" /></li>
-                    <li style={{ 'listStyleType': 'none' }}><img src="https://res.cloudinary.com/dg29vcpk7/image/upload/v1654805779/FindyApp/Group_3_sbwgpa.png" alt="img" /></li>
-                    <li style={{ 'listStyleType': 'none' }}><img src="https://res.cloudinary.com/dg29vcpk7/image/upload/v1654805779/FindyApp/Group_1_szdab5.png" alt="img" /></li>
-                    <li style={{ 'listStyleType': 'none' }}><img src="https://res.cloudinary.com/dg29vcpk7/image/upload/v1654805780/FindyApp/Group_4_aoedlm.png" alt="img" /></li>
-                    <li style={{ 'listStyleType': 'none' }}><img src="https://res.cloudinary.com/dg29vcpk7/image/upload/v1654805779/FindyApp/Group_2_prbahn.png" alt="img" /></li>
-                    <li style={{ 'listStyleType': 'none' }}><img src="https://res.cloudinary.com/dg29vcpk7/image/upload/v1654805779/FindyApp/Group_3_sbwgpa.png" alt="img" /></li>
-                    <li style={{ 'listStyleType': 'none' }}><img src="https://res.cloudinary.com/dg29vcpk7/image/upload/v1654805779/FindyApp/Group_1_szdab5.png" alt="img" /></li>
-                    <li style={{ 'listStyleType': 'none' }}><img src="https://res.cloudinary.com/dg29vcpk7/image/upload/v1654805780/FindyApp/Group_4_aoedlm.png" alt="img" /></li>
+                    {
+                        data.map(avatar => (
+                            <li key={avatar.id} style={{ 'listStyleType': 'none' }}><img src={avatar.avatar} alt="img" /></li>
+                        ))
+                    }
+
                 </UlList>
             </SliderDiv>
 
