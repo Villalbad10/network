@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../Components/Home";
+import LoginComp from "../Components/LoginComp";
 import Perfil from "../Containers/Perfil";
 
 const AppRouter = () => {
@@ -7,8 +8,8 @@ const AppRouter = () => {
   return (
    <BrowserRouter>
     <Routes>
-      
-     <Route path="/" element={<Home/>} />
+    <Route path="/" element={<LoginComp/>} />
+     <Route path="/home" element={<Home/>} />
      <Route path="/perfil" element={<Perfil/>} />
     
     </Routes>
