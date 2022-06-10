@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Form } from 'react-bootstrap';
 import postData from '../helpers/postData';
 import FormHook from '../Hooks/HookForm';
@@ -16,7 +16,7 @@ const RegisterComp = () => {
    useEffect(() => {
    }, [])
 
-   const handleSubmit = async (e) => {
+   const handleSubmit = (e) => {
       e.preventDefault();
       postData(data);
       console.log(data);

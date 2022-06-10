@@ -8,40 +8,43 @@ import { Btn, FormDiv, FormInput, LoginDiv } from '../styles/styles';
 const LoginComp = () => {
    const navigate = useNavigate()
    const [data, handleChange, reset] = FormHook({
-      email:"",
-      pass:""
+      email: "",
+      pass: ""
    })
 
    useEffect(() => {
-     console.log(data)
+      console.log(data)
    }, [data])
 
    const handleSubmit = async (e) => {
       e.preventDefault();
-      const datos= await getData()
+      const datos = await getData()
       const email = data.email;
       const password = data.pass;
       datos.forEach(element => {
-         const { email: emailUsuario, pass:contraseña } = element;
-         if (emailUsuario== email){
-            if(contraseña==password){
-             reset()
-             navigate('/home')}
-             else{alert('Contraseña incorrecta')}
-            }})}
-         
+         const { email: emailUsuario, pass: contraseña } = element;
+         if (emailUsuario == email) {
+            if (contraseña == password) {
+               reset()
+               navigate('/home')
+            }
+            else { alert('Contraseña incorrecta') }
+         }
+      })
+   }
+
 
 
    return (
-   <LoginDiv>
-          <img src='https://res.cloudinary.com/dg29vcpk7/image/upload/v1654821647/FindyApp/LOGOLOGO-2_niodaj.png' alt='logoFrom'/>
-           <FormDiv onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicEmail" style={{'display':'flex', 'flexDirection':'column', 'width':'80%','margin':'0 auto', 'gap':'5px', 'marginTop':'20px'}}>
+      <LoginDiv>
+         <img src='https://res.cloudinary.com/dg29vcpk7/image/upload/v1654821647/FindyApp/LOGOLOGO-2_niodaj.png' alt='logoFrom' />
+         <FormDiv onSubmit={handleSubmit}>
+            <Form.Group className="mb-3" controlId="formBasicEmail" style={{ 'display': 'flex', 'flexDirection': 'column', 'width': '80%', 'margin': '0 auto', 'gap': '5px', 'marginTop': '20px' }}>
                <Form.Label>E m a i l  A d d r e s s</Form.Label>
                <FormInput name="email" onChange={handleChange} type="email" placeholder="Enter email" />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword" style={{'display':'flex', 'flexDirection':'column', 'width':'80%','margin':'0 auto', 'gap':'5px', 'marginTop':'20px'}}>
+            <Form.Group className="mb-3" controlId="formBasicPassword" style={{ 'display': 'flex', 'flexDirection': 'column', 'width': '80%', 'margin': '0 auto', 'gap': '5px', 'marginTop': '20px' }}>
                <Form.Label>P a s s w o r d</Form.Label>
                <FormInput name="pass" onChange={handleChange} type="password" placeholder="Password" />
             </Form.Group>
@@ -55,5 +58,5 @@ const LoginComp = () => {
          </FormDiv>
       </LoginDiv>
    )
-   }
+}
 export default LoginComp
