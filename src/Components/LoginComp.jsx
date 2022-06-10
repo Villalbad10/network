@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Form } from 'react-bootstrap'
 import getData from '../helpers/getData';
+import { Btn, FormDiv, FormInput, LoginDiv } from '../styles/styles';
 
 const LoginComp = () => {
    const [data, setData] = useState([]);
@@ -29,22 +30,23 @@ const LoginComp = () => {
    }
 
    return (
-      <>
-         <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-               <Form.Label>Email address</Form.Label>
-               <Form.Control name="email" onChange={handleValue} type="email" placeholder="Enter email" />
+   <LoginDiv>
+          <img src='https://res.cloudinary.com/dg29vcpk7/image/upload/v1654821647/FindyApp/LOGOLOGO-2_niodaj.png' alt='logoFrom'/>
+           <FormDiv onSubmit={handleSubmit}>
+            <Form.Group className="mb-3" controlId="formBasicEmail" style={{'display':'flex', 'flexDirection':'column', 'width':'80%','margin':'0 auto', 'gap':'5px', 'marginTop':'20px'}}>
+               <Form.Label>E m a i l  A d d r e s s</Form.Label>
+               <FormInput name="email" onChange={handleValue} type="email" placeholder="Enter email" />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-               <Form.Label>Password</Form.Label>
-               <Form.Control name="pass" onChange={handleValue} type="password" placeholder="Password" />
+            <Form.Group className="mb-3" controlId="formBasicPassword" style={{'display':'flex', 'flexDirection':'column', 'width':'80%','margin':'0 auto', 'gap':'5px', 'marginTop':'20px'}}>
+               <Form.Label>P a s s w o r d</Form.Label>
+               <FormInput name="pass" onChange={handleValue} type="password" placeholder="Password" />
             </Form.Group>
-            <Button variant="outline-primary" type="submit">
+            <Btn variant="outline-primary" type="submit">
                Submit
-            </Button>
-         </Form>
-      </>
+            </Btn>
+         </FormDiv>
+      </LoginDiv>
    )
 }
 
