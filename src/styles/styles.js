@@ -27,6 +27,10 @@ export const ImageAvatar = styled.img`
    border-radius: 50%;
 `
 
+export const ImageAvatar2 = styled.img` 
+   border: 3px solid #FFBC74;
+   border-radius: 50%;
+` 
 export const Card = styled.div`
   background-color: white;
   box-shadow: 2px 2px 2px 1px #b8b8b8;
