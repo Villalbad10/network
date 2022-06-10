@@ -1,3 +1,4 @@
+import { Button, Form, FormControl } from "react-bootstrap";
 import styled from "styled-components";
 
 export const HeadDiv = styled.header`
@@ -43,7 +44,7 @@ export const NameDiv = styled.div`
 // FOOTER
 
 export const FooterSection = styled.footer`
- background: url("https://res.cloudinary.com/dg29vcpk7/image/upload/v1654810853/FindyApp/Rectangle_60_v9x2pa.png");
+  background: url("https://res.cloudinary.com/dg29vcpk7/image/upload/v1654810853/FindyApp/Rectangle_60_v9x2pa.png");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -58,21 +59,65 @@ export const FooterSection = styled.footer`
   padding-bottom: 55px;
 `;
 
-export const ImagePlus = styled.img` 
-    width: 50px;
-    height: 50px;
-    position: relative;
-    bottom: 20px;
-    padding: 10px;
-`
+export const ImagePlus = styled.img`
+  width: 50px;
+  height: 50px;
+  position: relative;
+  bottom: 20px;
+  padding: 10px;
+`;
 
 export const FooterBack = styled.div`
-    display: flex;
-    position: relative;
-    bottom:40px;
-    justify-content: space-between;
-    width: 95%;
-    align-items: center;
-    font-size: 35px;
-    color:white
+  display: flex;
+  position: relative;
+  bottom: 40px;
+  justify-content: space-between;
+  width: 95%;
+  align-items: center;
+  font-size: 35px;
+  color: white;
 `;
+
+/* LOGIN */
+
+export const LoginDiv = styled.div`
+ background: linear-gradient(320deg, rgba(255,240,240,1) 0%, rgba(255,254,231,1) 46%, rgba(255,252,249,1) 100%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const FormDiv = styled(Form)` 
+    width: 80%;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px #DFDFDF;
+    margin-top: 20px;
+ `
+
+ export const FormInput = styled(FormControl)`
+    border:none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #F2F2F2;
+
+ `
+
+ export const Btn = styled(Button)` 
+    border:none;
+    width:50%;
+    margin:0 auto;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #FF7674;
+    color:white;
+    font-size: 14px;
+    letter-spacing: 2px;
+`

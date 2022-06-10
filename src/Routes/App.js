@@ -11,6 +11,7 @@ const AppRouter = () => {
     <Route path="/" element={<LoginComp/>} />
      <Route path="/home" element={<Home/>} />
      <Route path="/perfil" element={<Perfil/>} />
+     <Route path="/login" element={<LoginComp/>} />
     
     </Routes>
      </BrowserRouter>
