@@ -1,6 +1,6 @@
 
 const getData = async () => {
-   const res = await (await fetch(`https://api.npoint.io/5cd6a6f4d161f28291f0`)).json();
+   const res = await (await fetch(`https://api.npoint.io/5cd6a6f4d161f28291f0/users`)).json();
    return res;
 
 }
